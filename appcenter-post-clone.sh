@@ -4,6 +4,9 @@ echo "Installing applesimutils..."
 echo "Installing detox cli..."
 npm install -g detox-cli
 
+echo "Installing dependencies for detox tests..."
+npm install
+
 echo "Building the project..."
 detox build --configuration ios.sim.release
 
