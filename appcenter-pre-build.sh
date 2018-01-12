@@ -1,6 +1,5 @@
 echo "Installing applesimutils..."
-brew tap wix/brew
-brew install wix/brew/applesimutils
+brew tap wix/brew && brew install wix/brew/applesimutils
 
 echo "Installing detox cli..."
 npm install -g detox-cli
