@@ -1,5 +1,11 @@
-echo "Installing Node 8..."
-brew uninstall node && brew install node@8.5 && brew link --force node@8.5
+echo "Installing NVM..."
+brew update
+brew install nvm
+source $(brew --prefix nvm)/nvm.sh
+
+echo "Installing v8.5..."
+nvm install v8.5
+nvm use v8.5
 
 echo "Installing applesimutils..."
 #brew tap wix/brew && brew install wix/brew/applesimutils
