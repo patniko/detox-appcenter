@@ -9,6 +9,7 @@ nvm use --delete-prefix v8.5
 
 echo "Installing applesimutils..."
 brew tap wix/brew
+brew update
 brew install wix/brew/applesimutils
 
 echo "Figuring out node version..."
