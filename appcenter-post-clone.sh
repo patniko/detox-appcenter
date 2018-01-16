@@ -8,7 +8,7 @@ nvm install v8.5
 nvm use --delete-prefix v8.5
 
 echo "Installing applesimutils..."
-brew tap wix/brew
+brew tap wix/brew --verbose --debug
 brew update
 brew install wix/brew/applesimutils
 
