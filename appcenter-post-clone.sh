@@ -5,7 +5,7 @@ source $(brew --prefix nvm)/nvm.sh
 
 echo "Installing v8.5..."
 nvm install v8.5
-nvm use v8.5
+nvm use --delete-prefix v8.5
 
 echo "Installing applesimutils..."
 #brew tap wix/brew && brew install wix/brew/applesimutils
