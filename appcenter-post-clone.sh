@@ -1,5 +1,5 @@
 echo "Installing Node 8..."
-brew install node@8
+brew uninstall node && brew install node@8.5 && brew link --force node@8.5
 
 echo "Installing applesimutils..."
 #brew tap wix/brew && brew install wix/brew/applesimutils
