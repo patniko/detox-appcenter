@@ -7,10 +7,14 @@ echo "Installing v8.5..."
 nvm install v8.5
 nvm use --delete-prefix v8.5
 
-echo "Installing applesimutils..."
+echo "Adding applesimutils tap..."
 brew tap wix/brew --verbose --debug
-brew update
-brew install wix/brew/applesimutils
+
+echo "Updating brew..."
+brew update --verbose --debug
+
+echp "Installing applesimutils"
+brew install wix/brew/applesimutils --verbose --debug
 
 echo "Figuring out node version..."
 node --version
