@@ -1,6 +1,8 @@
 echo "Adding applesimutils tap..."
-brew tap wix/brew --verbose --debug
-brew update -force
+mkdir simutils && cd simutils
+curl https://raw.githubusercontent.com/wix/homebrew-brew/master/AppleSimulatorUtils-0.5.22.tar.gz -o applesimutils.tar.gz
+tar xzvf applesimutils.tar.gz
+sh buildForBrew.sh && cp ./build/Build/Products/Release/applesimutils /usr/local/bin
 
 echo "Installing NVM..."
 brew install nvm
@@ -28,3 +30,5 @@ detox build --configuration ios.sim.release
 
 echo "Executing tests..."
 detox test --configuration ios.sim.release --cleanup
+
+
