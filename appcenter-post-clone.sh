@@ -1,20 +1,33 @@
+echo "Dumping simulators..."
+xcrun simctl list | xargs echo
+
+echo "Install xcversion..."
+gem install xcode-install
+
+echo "Installing simulator..."
+xcversion simulators --install='iOS 9.3'
+
+echo "Installing applesimutils"
+mkdir simutils
+cd simutils
+curl https://raw.githubusercontent.com/wix/homebrew-brew/master/AppleSimulatorUtils-0.5.22.tar.gz -o applesimutils.tar.gz
+tar xzvf applesimutils.tar.gz
+sh buildForBrew.sh 
+cd ..
+export PATH=$PATH:./simutils/build/Build/Products/Release
+
+
 echo "Installing NVM..."
-brew update
 brew install nvm
 source $(brew --prefix nvm)/nvm.sh
 
 echo "Installing v8.5..."
-nvm install v8.5
-nvm use --delete-prefix v8.5
+nvm install v8.5.0
+nvm use --delete-prefix v8.5.0
+nvm alias default v8.5.0
 
-echo "Adding applesimutils tap..."
-brew tap wix/brew --verbose --debug
-
-echo "Updating brew..."
-brew update --verbose --debug
-
-echp "Installing applesimutils"
-brew install wix/brew/applesimutils --verbose --debug
+echo "Detecting applesimutils"
+which applesimutils
 
 echo "Figuring out node version..."
 node --version
@@ -30,3 +43,5 @@ detox build --configuration ios.sim.release
 
 echo "Executing tests..."
 detox test --configuration ios.sim.release --cleanup
+
+
