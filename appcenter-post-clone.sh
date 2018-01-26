@@ -5,6 +5,7 @@ curl https://raw.githubusercontent.com/wix/homebrew-brew/master/AppleSimulatorUt
 tar xzvf applesimutils.tar.gz
 sh buildForBrew.sh 
 PATH=$PATH;./build/Build/Products/Release
+cd ..
 
 echo "Installing NVM..."
 brew install nvm
