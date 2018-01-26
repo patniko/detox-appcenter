@@ -17,8 +17,8 @@ nvm install v8.5.0
 nvm use --delete-prefix v8.5.0
 nvm alias default v8.5.0
 
-echo "Installing applesimutils"
-#brew install wix/brew/applesimutils --verbose --debug
+echo "Detecting applesimutils"
+which applesimutils
 
 echo "Figuring out node version..."
 node --version
