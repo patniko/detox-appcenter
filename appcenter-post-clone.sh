@@ -1,6 +1,11 @@
 echo "Installing applesimutils"
-rm -rf /usr/local/Homebrew/Library/Taps/wix/homebrew-brew
-git clone https://github.com/wix/homebrew-brew.git /usr/local/Homebrew/Library/Taps/wix/homebrew-brew
+mkdir simutils
+cd simutils
+curl https://raw.githubusercontent.com/wix/homebrew-brew/master/AppleSimulatorUtils-0.5.22.tar.gz -o applesimutils.tar.gz
+tar xzvf applesimutils.tar.gz
+sh buildForBrew.sh 
+cd ..
+export PATH=$PATH:./simutils/build/Build/Products/Release
 
 echo "Installing NVM..."
 brew install nvm
