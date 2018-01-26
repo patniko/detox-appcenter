@@ -12,7 +12,7 @@ nvm use --delete-prefix v8.5
 nvm alias default v8.5
 
 echo "Updating brew..."
-brew update --verbose --debug
+brew update -force --verbose --debug
 
 echp "Installing applesimutils"
 brew install wix/brew/applesimutils --verbose --debug
