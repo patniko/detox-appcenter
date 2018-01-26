@@ -1,21 +1,21 @@
-echo "Adding applesimutils tap..."
+echo "Installing applesimutils"
 mkdir simutils
 cd simutils
 curl https://raw.githubusercontent.com/wix/homebrew-brew/master/AppleSimulatorUtils-0.5.22.tar.gz -o applesimutils.tar.gz
 tar xzvf applesimutils.tar.gz
 sh buildForBrew.sh 
-cp ./build/Build/Products/Release/applesimutils /usr/local/bin
+PATH=$PATH;./build/Build/Products/Release
 
 echo "Installing NVM..."
 brew install nvm
 source $(brew --prefix nvm)/nvm.sh
 
 echo "Installing v8.5..."
-nvm install v8.5
-nvm use v8.5
-nvm alias default v8.5
+nvm install v8.5.0
+nvm use --delete-prefix v8.5.0
+nvm alias default v8.5.0
 
-echp "Installing applesimutils"
+echo "Installing applesimutils"
 #brew install wix/brew/applesimutils --verbose --debug
 
 echo "Figuring out node version..."
