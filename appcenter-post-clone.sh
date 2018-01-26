@@ -1,12 +1,3 @@
-echo "Dumping simulators..."
-xcrun simctl list | xargs echo
-
-echo "Install xcversion..."
-gem install xcode-install
-
-echo "Installing simulator..."
-xcversion simulators --install='iOS 9.3'
-
 echo "Installing applesimutils"
 mkdir simutils
 cd simutils
@@ -15,7 +6,6 @@ tar xzvf applesimutils.tar.gz
 sh buildForBrew.sh 
 cd ..
 export PATH=$PATH:./simutils/build/Build/Products/Release
-
 
 echo "Installing NVM..."
 brew install nvm
