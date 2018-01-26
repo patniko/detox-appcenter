@@ -1,3 +1,6 @@
+echo "Adding applesimutils tap..."
+brew tap wix/brew --verbose --debug
+
 echo "Installing NVM..."
 brew update
 brew install nvm
@@ -6,9 +9,7 @@ source $(brew --prefix nvm)/nvm.sh
 echo "Installing v8.5..."
 nvm install v8.5
 nvm use --delete-prefix v8.5
-
-echo "Adding applesimutils tap..."
-brew tap wix/brew --verbose --debug
+nvm alias default v8.5
 
 echo "Updating brew..."
 brew update --verbose --debug
