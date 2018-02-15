@@ -1,3 +1,4 @@
+
 echo "Installing applesimutils"
 mkdir simutils
 cd simutils
@@ -6,6 +7,7 @@ tar xzvf applesimutils.tar.gz
 sh buildForBrew.sh 
 cd ..
 export PATH=$PATH:./simutils/build/Build/Products/Release
+
 
 echo "Installing NVM..."
 brew install nvm
