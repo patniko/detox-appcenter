@@ -1,11 +1,3 @@
-echo "Dumping simulators..."
-xcrun simctl list | xargs echo
-
-echo "Install xcversion..."
-gem install xcode-install
-
-echo "Installing simulator..."
-xcversion simulators --install='iOS 9.3'
 
 echo "Installing applesimutils"
 mkdir simutils
