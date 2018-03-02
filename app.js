@@ -9,7 +9,7 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View,
+  View,asdfsadfs
   TouchableOpacity
 } from 'react-native';
 
