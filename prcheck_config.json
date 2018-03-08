@@ -1,13 +1,9 @@
 {
-    "repos": [
+    "appcenter_apps": [
         {
-            "provider": "github",
-            "repo_owner": "pniko",
-            "repo_name": "detox-appcenter",
             "branch_template": "master",
-            "appcenter_owner_type": "orgs",
-            "appcenter_owner": "Patricks-Fantastic-Org",
-            "appcenter_app": "Detox-Tests"
+            "owner_name": "Patricks-Fantastic-Org",
+            "app_name": "Detox-Tests"
         }
     ]
 }
