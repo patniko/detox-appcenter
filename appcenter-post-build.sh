@@ -1,4 +1,3 @@
-# Sample post-build script for Github PR checks
 #
 # This script updates the Github status for commits based on whether or not
 # a successful build occurred against that sha. It can be used in conjunction
