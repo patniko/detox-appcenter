@@ -11,7 +11,7 @@ function parse_git_hash() {
 SHA=$(parse_git_hash)
 github_notify_build_state() {
   STATE="\"success\""
-  DESCRIPTION="\"App Center build successfully created.\""
+  DESCRIPTION="\"App Center build successfully created!\""
   if [ "$1" != true ]; then 
     STATE="\"failure\""
     DESCRIPTION="\"Errors occurred during App Center build.\""
