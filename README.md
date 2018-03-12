@@ -1,5 +1,5 @@
 > detox
-
+sample PR build
 # React Native Demo Project
 
 ## Requirements
