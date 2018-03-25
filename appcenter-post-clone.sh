@@ -34,4 +34,6 @@ detox build --configuration ios.sim.release
 echo "Executing tests..."
 detox test --configuration ios.sim.release --cleanup
 
+echo "Executing tests..."
+detox test --configuration android.sim.release --cleanup
 
