@@ -4,7 +4,7 @@
 
 ## Requirements
 
-* Make sure you have Xcode installed (tested with Xcode 8.1-8.2).
+* Make sure you dasdfhave Xcode installed (tested with Xcode 8.1-8.2).
 * make sure you have node installed (`brew install node`, node 7.6.0 and up is required for native async-await support, otherwise you'll have to babel the tests).
 * Make sure you have react-native dependencies installed:
    * react-native-cli is installed (`npm install -g react-native-cli`)
