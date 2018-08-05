@@ -3,9 +3,13 @@
 buildscript {
     repositories {
         jcenter()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath 'com.android.tools.build:gradle:3.1.3'
         classpath 'com.palantir:jacoco-coverage:0.4.0'
     }
 }
@@ -19,7 +23,27 @@ allprojects {
             url "$projectDir/../../node_modules/react-native/android"
         }
         maven {
-            url "https://maven.google.com"
+            url "https://maven.google.com/"
+            name 'Google'
+        }
+    }
+}
+
+ext {
+    buildToolsVersion = "27.0.3"
+    minSdkVersion = 24
+    compileSdkVersion = 27
+    targetSdkVersion = 27
+    supportLibVersion = "27.1.1"
+}
+
+subprojects { subproject ->
+    afterEvaluate{
+        if((subproject.plugins.hasPlugin('android') || subproject.plugins.hasPlugin('android-library'))) {
+            android {
+                compileSdkVersion rootProject.ext.compileSdkVersion
+                buildToolsVersion rootProject.ext.buildToolsVersion
+            }
         }
     }
 }
