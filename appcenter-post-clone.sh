@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-NODE_VERSION=10.8.0
 APPLESIMUTILS_VERSION=0.5.22
 
 echo "Installing applesimutils..."
