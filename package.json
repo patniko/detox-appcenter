@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "react-native start"
+    "start": "react-native start",
+    "run-ios": "react-native run-ios",
+    "run-android": "react-native run-android"
   },
   "dependencies": {
     "react": "16.4.1",
