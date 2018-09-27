@@ -27,6 +27,7 @@ project.xcworkspace
 .idea
 .gradle
 local.properties
+*.iml
 
 # node.js
 #
@@ -36,5 +37,19 @@ npm-debug.log
 # BUCK
 buck-out/
 \.buckd/
-android/app/libs
-android/keystores/debug.keystore
+*.keystore
+
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/
+
+*/fastlane/report.xml
+*/fastlane/Preview.html
+*/fastlane/screenshots
+
+# Bundle artifact
+*.jsbundle
+artifacts/

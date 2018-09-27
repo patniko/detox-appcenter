@@ -13,7 +13,7 @@ import {
   TouchableOpacity
 } from 'react-native';
 
-class example extends Component {
+export default class example extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -39,7 +39,7 @@ class example extends Component {
   renderAfterButton() {
     return (
       <View style={{flex: 1, paddingTop: 20, justifyContent: 'center', alignItems: 'center'}}>
-        <Text style={{fontSize: 25}}>
+        <Text style={{fontSize: 25}} testID="greeting_text">
           {this.state.greeting}!!!
         </Text>
       </View>
@@ -51,5 +51,3 @@ class example extends Component {
     });
   }
 }
-
-AppRegistry.registerComponent('example', () => example);
