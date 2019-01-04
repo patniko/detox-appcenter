@@ -3,12 +3,17 @@
 ## Background
 This sample project demonstrates running Detox tests prior to a regular MS [AppCenter](https://appcenter.ms/) build
 * on React Native 0.56.0
-* with Detox 9.1.2 in Xcode 9.4.1 [![Build status](https://build.appcenter.ms/v0.1/apps/b941d881-bc98-48d1-8bc6-8ddf76856b36/branches/detox_9.1.2/badge)](https://appcenter.ms)
+* with Detox 9.1.2 built by Xcode 10.1 [![Build status](https://build.appcenter.ms/v0.1/apps/b941d881-bc98-48d1-8bc6-8ddf76856b36/branches/detox_9.1.2-xcode_10.1/badge)](https://appcenter.ms)
 * and Mocha 5.2.0 test runner, currently
+
+This project has also run Detox tests successfully from AppCenter with:-
+* Detox 9.1.2 built by Xcode 9.4.1 [![Build status](https://build.appcenter.ms/v0.1/apps/b941d881-bc98-48d1-8bc6-8ddf76856b36/branches/detox_9.1.2/badge)](https://appcenter.ms)
+* _or_ Detox 9.0.4 built by Xcode 10.1 [![Build status](https://build.appcenter.ms/v0.1/apps/b941d881-bc98-48d1-8bc6-8ddf76856b36/branches/detox_9.0.4-xcode_10.1/badge)](https://appcenter.ms)
+* _or_ Detox 9.0.4 built by Xcode 9.4.1 [![Build status](https://build.appcenter.ms/v0.1/apps/b941d881-bc98-48d1-8bc6-8ddf76856b36/branches/detox_9.0.4/badge)](https://appcenter.ms)
 
 ## Requirements
 Make sure you have installed:
-* Xcode (tested with Xcode 9.4.1)
+* Xcode (tested with Xcode 9.4.1 and Xcode 10.1)
 * xcpretty (`gem install xcpretty` - https://github.com/supermarin/xcpretty)
 * Node.js (`brew install node@8` or `nvm install`. Node version 8.X or newer is _required_)
 * react-native dependencies:
