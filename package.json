@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "react": "16.4.1",
-    "react-native": "^0.56.0"
+    "react-native": "^0.70.6"
   },
   "devDependencies": {
     "mocha": "^5.2.0",
